@@ -2,96 +2,159 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Eslovaquia Connect</title>
+<title>Eslovaquia IV Portal</title>
 
 <style>
+
 body{
-background:linear-gradient(to bottom,#ffd6e7,#ffeef6);
+margin:0;
 font-family:Arial,sans-serif;
 text-align:center;
-padding-top:120px;
-overflow:hidden;
-margin:0;
 }
 
-h1{
-color:#4a90ff;
-font-size:55px;
-animation: aparecer 2s;
+/* PORTAL */
+
+#login{
+
+background-image:url("240812_Escudo_Eslovaquia.jpg");
+background-size:cover;
+background-position:center;
+
+height:100vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+color:white;
 }
 
-p{
-font-size:28px;
-color:#555;
+.fondo{
+background:rgba(0,0,0,.7);
+
+padding:40px;
+
+border-radius:20px;
 }
 
-#alerta{
-display:none;
-font-size:35px;
-font-weight:bold;
+input{
+
+padding:15px;
+
+border:none;
+
+border-radius:10px;
+
+width:250px;
+
+font-size:18px;
+}
+
+button{
+
 margin-top:20px;
-color:#ff4d6d;
+
+padding:15px 30px;
+
+border:none;
+
+border-radius:15px;
+
+background:#0d6efd;
+
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
 }
 
-#video{
+/* BABY */
+
+#sorpresa{
+
 display:none;
-margin-top:40px;
+
+height:100vh;
+
+background:linear-gradient(to bottom,#ffd6e7,#dcecff);
+
+padding-top:80px;
 }
 
 video{
+
 width:80%;
+
 max-width:800px;
+
 border-radius:20px;
-box-shadow:0 0 20px rgba(0,0,0,.2);
+
+box-shadow:0 0 20px rgba(0,0,0,.3);
+
+margin-top:20px;
 }
 
-@keyframes aparecer{
-from{
-opacity:0;
-transform:scale(.7)
-}
-to{
-opacity:1;
-transform:scale(1)
-}
-}
 </style>
+
 </head>
 
 <body>
 
-<h1>Eslovaquia International Connect 🌍</h1>
+<div id="login">
 
-<p id="estado">
-Destino detectado: Eslovaquia 🇸🇰
-<br><br>
-Conectando grupo...
-</p>
+<div class="fondo">
 
-<div id="alerta">
-🚨 NUEVA MISIÓN DETECTADA 🚨
+<h1>ESLOVAQUIA IV PORTAL</h1>
+
+<p>Plataforma Multinacional de Acceso</p>
+
+<input placeholder="Crear usuario">
+
+<br>
+
+<button onclick="entrar()">
+
+Acceder
+
+</button>
+
 </div>
 
-<div id="video">
-<video controls autoplay muted playsinline>
+</div>
+
+<div id="sorpresa">
+
+<h1>
+
+🚨 NUEVA MISIÓN: PAPÁS 👶❤️
+
+</h1>
+
+<h2>
+
+Bienvenidas a la verdadera misión
+
+</h2>
+
+<video controls playsinline>
+
 <source src="eslovaquiaIV.mp4" type="video/mp4">
+
 </video>
+
 </div>
 
 <script>
 
-setTimeout(()=>{
-document.getElementById("estado").innerHTML=
-"Verificando acceso...";
-},4000);
+function entrar(){
 
-setTimeout(()=>{
-document.getElementById("alerta").style.display="block";
-},7000);
+document.getElementById("login").style.display="none";
 
-setTimeout(()=>{
-document.getElementById("video").style.display="block";
-},9000);
+document.getElementById("sorpresa").style.display="block";
+
+}
 
 </script>
 
