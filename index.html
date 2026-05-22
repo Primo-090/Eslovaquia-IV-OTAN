@@ -11,6 +11,7 @@ font-family:Arial,sans-serif;
 text-align:center;
 padding-top:120px;
 overflow:hidden;
+margin:0;
 }
 
 h1{
@@ -37,7 +38,9 @@ display:none;
 margin-top:40px;
 }
 
-iframe{
+video{
+width:80%;
+max-width:800px;
 border-radius:20px;
 box-shadow:0 0 20px rgba(0,0,0,.2);
 }
@@ -57,10 +60,11 @@ transform:scale(1)
 
 <body>
 
-<h1>Welcome to my pregnancy 💕👶</h1>
+<h1>Eslovaquia International Connect 🌍</h1>
 
 <p id="estado">
-Destino detectado: Eslovaquia 🇸🇰 <br><br>
+Destino detectado: Eslovaquia 🇸🇰
+<br><br>
 Conectando grupo...
 </p>
 
@@ -69,14 +73,9 @@ Conectando grupo...
 </div>
 
 <div id="video">
-
-<iframe width="800"
-height="450"
-src="https://www.youtube.com/embed/4togCnhsSag?autoplay=1"
-allow="autoplay"
-allowfullscreen>
-</iframe>
-
+<video controls autoplay muted playsinline>
+<source src="eslovaquiaIV.mp4" type="video/mp4">
+</video>
 </div>
 
 <script>
@@ -84,18 +83,17 @@ allowfullscreen>
 setTimeout(()=>{
 document.getElementById("estado").innerHTML=
 "Verificando acceso...";
-},4000)
+},4000);
 
 setTimeout(()=>{
 document.getElementById("alerta").style.display="block";
-},7000)
+},7000);
 
 setTimeout(()=>{
 document.getElementById("video").style.display="block";
-},9000)
+},9000);
 
 </script>
 
 </body>
-
 </html>
