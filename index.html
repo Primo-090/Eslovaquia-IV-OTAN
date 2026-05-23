@@ -78,18 +78,14 @@ cursor:pointer;
 /* BABY */
 #sorpresa{
 display:none;
-
-min-height:100vh;
-
+height:100dvh;
 background:linear-gradient(to bottom,#ffd6e7,#dcecff);
-
 flex-direction:column;
-justify-content:center;
+justify-content:flex-start;
 align-items:center;
-
-padding:20px;
-
+padding:20px 15px;
 box-sizing:border-box;
+overflow:hidden;
 }
 #sorpresa h1{
 color:#6bbcff;
@@ -144,8 +140,7 @@ box-shadow:0 0 20px rgba(0,0,0,.3);
 
 <p>Plataforma Multinacional de Acceso</p>
 
-<input placeholder="Crear usuario">
-
+<input id="usuario" placeholder="Crear usuario" readonly onclick="this.removeAttribute('readonly'); this.focus();">
 <br>
 
 <button onclick="entrar()">
@@ -195,6 +190,10 @@ window.location.pathname + "?v=" + Date.now()
 
 function entrar(){
 
+document.activeElement.blur();
+
+setTimeout(()=>{
+
 document.getElementById("login").style.display="none";
 document.getElementById("sorpresa").style.display="flex";
 
@@ -208,6 +207,9 @@ video.volume=1;
 video.play().catch(()=>{
 console.log("Autoplay bloqueado");
 });
+
+},300);
+
 }
 
 </script>
