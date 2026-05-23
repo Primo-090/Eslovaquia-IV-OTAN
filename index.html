@@ -162,7 +162,7 @@ Ahora somos 4 ❤️
 Bienvenidas a la verdadera misión
 
 </h3>
-<video controls playsinline>
+<video id="eco" controls autoplay muted playsinline preload="auto">
 
 <source src="eslovaquiaIV.mp4" type="video/mp4">
 
@@ -178,12 +178,16 @@ document.getElementById("login").style.display="none";
 
 document.getElementById("sorpresa").style.display="block";
 
-/* fuerza ir arriba */
-
 window.scrollTo({
 top:0,
-behavior:"smooth"
+behavior:"instant"
 });
+
+setTimeout(()=>{
+
+document.getElementById("eco").play();
+
+},300);
 
 }
 
