@@ -79,7 +79,6 @@ min-height:100vh;
 
 background:linear-gradient(to bottom,#ffd6e7,#dcecff);
 
-display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
@@ -184,11 +183,14 @@ Bienvenidas a la verdadera misión
 function entrar(){
 
 document.getElementById("login").style.display="none";
-document.getElementById("sorpresa").style.display="block";
+document.getElementById("sorpresa").style.display="flex";
 
 window.scrollTo(0,0);
 
 let video=document.getElementById("eco");
+
+video.muted=false;
+video.volume=1;
 
 video.play().catch(()=>{
 console.log("Autoplay bloqueado");
