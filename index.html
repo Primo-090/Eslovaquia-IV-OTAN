@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Eslovaquia IV Portal</title>
 
 <style>
@@ -108,21 +112,22 @@ margin-top:-10px;
 
 video{
 
-width:85%;
-max-width:500px;
-max-height:45vh;
+width:100%;
+
+max-width:360px;
+
+height:auto;
 
 object-fit:contain;
+
+display:block;
+
+margin:15px auto;
 
 border-radius:20px;
 
 box-shadow:0 0 20px rgba(0,0,0,.3);
 
-margin-top:25px;
-
-display:block;
-margin-left:auto;
-margin-right:auto;
 }
 
 </style>
@@ -172,7 +177,7 @@ Ahora somos 4 ❤️
 Bienvenidas a la verdadera misión
 
 </h3>
-<video id="eco" controls autoplay playsinline preload="auto">
+<video id="eco" controls playsinline preload="auto">
 
 <source src="eslovaquiaIV.mp4" type="video/mp4">
 
@@ -181,6 +186,12 @@ Bienvenidas a la verdadera misión
 </div>
 
 <script>
+
+if (window.location.search.indexOf("v=") === -1) {
+window.location.replace(
+window.location.pathname + "?v=" + Date.now()
+);
+}
 
 function entrar(){
 
@@ -197,10 +208,10 @@ video.volume=1;
 video.play().catch(()=>{
 console.log("Autoplay bloqueado");
 });
-
 }
 
 </script>
+
 
 </body>
 </html>
